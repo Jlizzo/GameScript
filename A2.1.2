@@ -1,0 +1,57 @@
+
+let total = 0
+//function total adds the random numbers of die1 and die2 when button is clicked
+
+//myFunction() calls button and places random numbers in p'1' and p'2'
+function myFunction() {
+//die2 calls p'1' and shows random number
+die1 = document.getElementById('1').innerHTML = Math.floor(Math.random() * 6) + 1;
+
+//die2 calls p'2' and shows random number
+die2 = document.getElementById('2').innerHTML = Math.floor(Math.random() * 6) + 1;
+
+//'total' adds the random numbers of die1 and die 2
+let total = die1 + die2;
+
+//'quot' devides the random numbers of die1 and die2
+let quot = die1 / die2;
+
+// if - evaluates the addition of die1 and die2. if the total = 7 or 11 it delivers the corresponding phrase
+if (total == 7 || total == 11) {
+
+	//"Craps! You Win!" shows if the total of die1 and die2 = 7 or 11
+	total = "Craps! You Win!";
+
+	//calls the conditional if statement and displays the phrase according to the math in paragraph 'results'
+	document.getElementById('results').innerHTML = total;
+
+// else if - evaluates the division of die1 and die2. if the total = 1 it delivers the corresponding phrase
+}else if (quot == 1) {  
+	
+		//"Doubles! You Win!" shows if die1 / die2 = 1 (this means both dice have the same number = doubles)
+		quot = "Doubles! You Win!";
+
+		//calls the conditional else if statements and displays the phrase according to the math in paragraph 'results'
+	    document.getElementById('results').innerHTML = quot;
+
+//else - evaluates the math of 'total' and 'quot'. if the math does NOT = 7, 11, or 1, it delivers the corresponding phrase	
+}else{
+
+		//"You Lose!" shows if die1/die2 = anything other than 1 (this means the dice have different numbers)
+		quot = "You Lose!";
+		
+		//calls the conditional else statement and displays the phrase according to the math in paragraph 'results'
+		document.getElementById('results').innerHTML = quot;
+
+	}
+	
+}
+
+
+
+
+
+
+	
+
+
